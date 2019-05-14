@@ -1,1 +1,24 @@
 @import '~bootstrap/scss/bootstrap.scss';
+$smallfontsize: 14px;
+$gaprow_height: 12px;
+.container{
+    background-color: #5200b1;
+    font-size:$smallfontsize;
+}
+.row
+{
+    border: 1px solid white;
+}
+.btn 
+{
+    background-color: #dfe8ff;
+    font-size:$smallfontsize;
+    padding-top:1px;
+    padding-bottom:1px;
+    margin:2px;
+    color:black;
+}
+.gaprow
+{
+    height:$gaprow_height;
+}
