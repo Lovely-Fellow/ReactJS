@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, ButtonToolbar, Dropdown} from 'reactstrap';
+import { Container, Row, Col, Button, ButtonToolbar, Input} from 'reactstrap';
 import '../index.css';
 
 export class Dashboard extends React.Component {
@@ -39,6 +39,11 @@ export class Dashboard extends React.Component {
             marginLeft: '-15px',
             paddingLeft: '5px',
             width: '100%'
+        }
+        const textalign_left =
+        {
+            textAlign:'left',
+            
         }
         
         return (
@@ -101,13 +106,31 @@ export class Dashboard extends React.Component {
                         </Row>
                         <Row style={{borderBottom:'none'}}>
                             <Col className="label">
-                                MESSAGETYPE:
+                                MESSAGEDATE:
                             </Col>
                             <Col >
                                 
                             </Col>
                         </Row>
                         <Row className="gaprow"></Row>
+                        <Row >
+                            <Col style={textalign_left}>
+                                <Input style={{marginLeft:'15px'}} type="checkbox"></Input>
+                                <label style={{marginLeft:'35px', marginTop:'3px'}} for="scales">IMPORTANT</label> 
+                            </Col>
+                        </Row>
+                        <Row >
+                            <Col style={textalign_left}>
+                                <Input style={{marginLeft:'15px'}} type="checkbox"></Input>
+                                <label style={{marginLeft:'35px', marginTop:'3px'}} for="scales">DUPLICATE FOR</label> 
+                                
+                            </Col>
+                        </Row>
+                        <Row className="gaprow">
+                        </Row>
+                        <Row>
+
+                        </Row>
                     </Col>
                     <Col xs="9">
                         <Row style={{borderBottom:'none', borderTop:'none'}}>
@@ -115,28 +138,40 @@ export class Dashboard extends React.Component {
                             PUT RTF EDITOR HERE
                             </Col>
                         </Row>
-                        
+                        <Row>
+                            <Col>
+                                <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
                 <Row>
-                <Col style={margin_right} xs="6">.col-6</Col>
-                <Col xs="6">.col-6</Col>
+                <Col></Col>
+                <Col xs="9">
+                    <Row>
+                        <Col xs="1">
+                            <Button>CLEAR</Button>
+                        </Col>
+                        <Col style={{color:'gray', marginTop:'3px'}}>
+                            CURRENT LENGTH: # OF CHARACTERS
+                        </Col>
+                        <Col xs="1">
+                            <Button>SAVE</Button>
+                        </Col>
+                    </Row>
+                </Col>
                 </Row>
+                <Row className="gaprow"></Row>
                 <Row>
-                <Col xs="6" sm="4">.col-6 .col-sm-4</Col>
-                <Col xs="6" sm="4">.col-6 .col-sm-4</Col>
-                <Col sm="4">.col-sm-4</Col>
+                    <Col style={textalign_left}>
+                        <Button>POST MESSAGE</Button>
+                    </Col>
+ 
                 </Row>
-                <Row>
-                <Col sm={{ size: 6, order: 2, offset: 1 }}>.col-sm-6 .order-sm-2 .offset-sm-1</Col>
-                </Row>
-                <Row>
-                <Col sm="12" md={{ size: 6, offset: 3 }}>.col-sm-12 .col-md-6 .offset-md-3</Col>
-                </Row>
-                <Row>
-                <Col sm={{ size: 'auto', offset: 1 }}>.col-sm-auto .offset-sm-1</Col>
-                <Col sm={{ size: 'auto', offset: 1 }}>.col-sm-auto .offset-sm-1</Col>
-                </Row>
+                <Row className="gaprow"></Row>
+                <Row className="gaprow"></Row>
+                <Row className="gaprow" style={{height:'70px'}}></Row>
+
             </Container>
 
         );
