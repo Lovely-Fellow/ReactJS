@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, ButtonToolbar} from 'reactstrap';
+import { Container, Row, Col, Button, ButtonToolbar, Dropdown} from 'reactstrap';
 import '../index.css';
 
 export class Dashboard extends React.Component {
@@ -8,11 +8,42 @@ export class Dashboard extends React.Component {
             backgroundColor: '#AAB2E9',
             color: '#5200B1',
             fontSize : '18px',
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            border: '2px solid #5200B1',
+            borderBottom:'none'
         };
+        const margin_left = {
+            marginLeft:'8px'
+        };
+        const margin_right = {
+            marginRight:'8px'
+        };
+        const border_top_none =
+        {
+            borderTop: 'none'
+        };
+        const border_bottom_none =
+        {
+            borderBottom: 'none'
+        };
+        
+        const border_right = {
+            borderRight: '2px solid #5200B1',
+        };
+        const border_left = {
+            borderLeft: '2px solid #5200B1',
+        }
+        const inputStyle =
+        {
+            
+            marginLeft: '-15px',
+            paddingLeft: '5px',
+            width: '100%'
+        }
+        
         return (
             <Container class="container">
-                <Row>
+                <Row style={border_bottom_none}>
                     <Col xs="10" style={title_style}>CALL CENTER - SAMPLE ADMINISTRATION</Col>
                     <Col xs="2">
                         <ButtonToolbar>
@@ -23,19 +54,72 @@ export class Dashboard extends React.Component {
                 </Row>
                 <Row className="gaprow"></Row>
                 <Row>
-                
-                <Col>.col</Col>
-                <Col>.col</Col>
-                <Col>.col</Col>
-                <Col>.col</Col>
+                    <Col>
+                        <Row >
+                            <Col className="label paddingtop paddingbottom">PRIMARY TICKER:</Col>
+                            <Col><input type="text"/></Col>
+                            <Col><Button>ALL POSITIONS</Button></Col>
+                        </Row>
+                        <Row>
+                            <Col className="label paddingtop paddingbottom">RELATED TICKER(S):</Col>
+                            <Col><input type="text"/></Col>
+                            <Col><Button>RELATED POSITIONS</Button></Col>
+                        </Row>
+                        
+                    </Col>
+                    <Col></Col>
+                    <Col style={margin_left}></Col>
+                </Row>
+                <Row className="gaprow"></Row>
+                <Row>
+                    <Col>
+                        <Row style={{borderBottom:'none', borderTop:'none'}}>
+                            <Col style={title_style}>
+                            NEWS PROPERTILES
+                            </Col>
+                        </Row>
+                        <Row style={{borderBottom:'none', borderTop:'none'}}>
+                            <Col className="label">
+                                CLASSIFICATION:
+                            </Col>
+                            <Col >
+                                <input style={inputStyle} type="text"/>
+                            </Col>
+                        </Row>
+                        <Row style={{borderBottom:'none'}}>
+                            <Col className="label">
+                                MESSAGETYPE:
+                            </Col>
+                            <Col >
+                                <select style={inputStyle} className="browser-default">
+                                    <option>Select Message Type...</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </Col>
+                        </Row>
+                        <Row style={{borderBottom:'none'}}>
+                            <Col className="label">
+                                MESSAGETYPE:
+                            </Col>
+                            <Col >
+                                
+                            </Col>
+                        </Row>
+                        <Row className="gaprow"></Row>
+                    </Col>
+                    <Col xs="9">
+                        <Row style={{borderBottom:'none', borderTop:'none'}}>
+                            <Col style={title_style}>
+                            PUT RTF EDITOR HERE
+                            </Col>
+                        </Row>
+                        
+                    </Col>
                 </Row>
                 <Row>
-                <Col xs="3">.col-3</Col>
-                <Col xs="auto">.col-auto - variable width content</Col>
-                <Col xs="3">.col-3</Col>
-                </Row>
-                <Row>
-                <Col xs="6">.col-6</Col>
+                <Col style={margin_right} xs="6">.col-6</Col>
                 <Col xs="6">.col-6</Col>
                 </Row>
                 <Row>
