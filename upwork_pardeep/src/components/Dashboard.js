@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, ButtonToolbar, Input} from 'reactstrap';
+import { Container, Row, Col, Button, ButtonToolbar, Input, DateTime } from 'reactstrap';
 import '../index.css';
 
 export class Dashboard extends React.Component {
@@ -107,9 +107,10 @@ export class Dashboard extends React.Component {
                         <Row style={{borderBottom:'none'}}>
                             <Col className="label">
                                 MESSAGEDATE:
+                                
                             </Col>
                             <Col >
-                                
+                                <Input type="datetime-local" style={{height:'10px'}} ></Input>
                             </Col>
                         </Row>
                         <Row className="gaprow"></Row>
