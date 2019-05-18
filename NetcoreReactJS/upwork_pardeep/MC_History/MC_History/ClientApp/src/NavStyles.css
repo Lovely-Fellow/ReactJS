@@ -1,0 +1,64 @@
+
+	A.btnText{
+		text-decoration: none;
+		color: black;
+		}
+	.btnUp{
+		font-family: Arial;
+		font-size: 11px;
+		color: black;
+		background-color: #c0c0c0;
+		border-left: 1px solid #ddeeff;
+		border-top: 1px solid #ddeeff;
+		border-right: 1px solid black;
+		border-bottom: 1px solid black;
+		padding-left: 0px;
+		}
+	.btnDown{
+		font-family: Arial;
+		font-size: 11px;
+		color: grey;
+		background-color: #A4B9E6;
+		border-left: 1px solid Navy;
+		border-top: 1px solid Navy;
+		border-right: 1px solid #ddeeff;
+		border-bottom: 1px solid #ddeeff;
+		padding-left: 1px;
+		}
+	.subbtnUp{
+		font-family: Arial;
+		font-size: 10px;
+		color: black;
+		/*background-color: #E7E7E6;*/
+		background-color: darkgray;
+		border-left: 1px solid white;
+		border-top: 1px solid white;
+		border-right: 1px solid black;
+		border-bottom: 1px solid black;
+		padding-left: 0px;
+		}
+	.subbtnDown{
+		font-family: Arial;
+		font-size: 10px;
+		color: grey;
+		background-color: #C1CDE6;
+		border-left: 1px solid black;
+		border-top: 1px solid black;
+		border-right: 1px solid white;
+		border-bottom: 1px solid white;
+		padding-left: 1px;
+		}
+	.textBox{
+		background: white;
+		height: 20px;
+		width: 85px;
+		border: solid 1 black;
+		font-family: Arial;
+		font-size: 12px;
+		}
+	.ShowSubTR{
+		display: "";
+		}
+	.HideSubTR{
+		display: none;
+		}
